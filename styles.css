@@ -118,8 +118,8 @@ input {
 
 input:focus {
     outline: none;
-    border-color: #3d8b1b;
-    box-shadow: 0 0 3px rgba(61, 139, 27, 0.3);
+    border-color: #0015ff;
+    box-shadow: 0 0 3px rgba(13, 3, 216, 0.3);
 }
 
 input:invalid:not(:placeholder-shown) {
