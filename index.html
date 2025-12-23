@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Sign Up - Odin Project</title>
 </head>
 
 <body>
@@ -24,42 +24,62 @@
 
         <div class="right-side">
             <div class="description">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti quibusdam ab laudantium
-                    esse cupiditate architecto fugiat optio rerum illum? Magnam cum, reprehenderit saepe dignissimos
-                    repellendus inventore ipsam maxime beatae.</p>
-                <p>Reiciendis dignissimos quasi quos.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum enim ab corrupti aut maiores cumque,
+                    possimus pariatur deserunt sequi. Eum <em>iusto</em> et debitis ea magnam iure illo ipsa tempore
+                    delectus.
+                </p>
+                <p>Reiciendis <em>dignissimos</em> quasi quos.</p>
             </div>
 
             <div class="form">
                 <h3>Let's do this!</h3>
-                <form action="/signup.html" method="get">
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" placeholder="John" pattern="[a-zA-Z][a-zA-Z\s\-']{1,50}"
-                        title="Please enter a valid name" required>
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" placeholder="Doe" pattern="[a-zA-Z][a-zA-Z\s\-']{1,50}"
-                        title="Please enter a valid last name" required>
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" placeholder="john@example.com"
-                        title="Please enter a valid email address" required>
-                    <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone" placeholder="08912345678" pattern="08[0-9]{8,11}"
-                        title="Phone must start with 08 and be 10-13 digits total">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" placeholder="Password"
-                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}"
-                        title="Password must be at least 8 characters with uppercase, lowercase, number, and special character"
-                        required>
-                    <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm_password" placeholder="Confirm password"
-                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}"
-                        title="Please re-enter the password" required>
-                    <button type="submit">Create Account</button>
+
+                <form action="/signup.html" method="post" id="signup-form" aria-label="Sign up form">
+                    <div class="form-group">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="John"
+                            pattern="[a-zA-Z][a-zA-Z\s\-']{1,50}" title="Please enter a valid name"
+                            autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Doe"
+                            pattern="[a-zA-Z][a-zA-Z\s\-']{1,50}" title="Please enter a valid last name"
+                            autocomplete="family-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com"
+                            title="Please enter a valid email address" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" placeholder="08912345678" pattern="08[0-9]{8,11}"
+                            title="Phone must start with 08 and be 10-13 digits total" autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password" placeholder="Password"
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}"
+                            title="Password must be at least 8 characters with uppercase, lowercase, number, and special character"
+                            autocomplete="new-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm_password" name="confirm_password"
+                            placeholder="Confirm password"
+                            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}"
+                            title="Please re-enter the password" autocomplete="new-password" required>
+                    </div>
                 </form>
-                <div class="form-footer">
-                    <p>Already have an account? <a href="#">Log in</a></p>
-                </div>
             </div>
+
+            <button type="submit" form="signup-form">Create Account</button>
+
+            <div class="form-footer">
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+
         </div>
     </div>
 </body>
